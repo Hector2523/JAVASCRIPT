@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -15,19 +16,14 @@
         display: block;
         margin: auto;
     }
-
 </style>
+
 <body>
-    <div id="um">
-        <h1>Aprendendo Javascript</h1>
-        <p id="texto"></p>
-        <p>
-            <script>
-                document.write(5 + 5)
-            </script>
-        </p>
-        <button onclick="meAlerte()">Clique para ser alertado</button>
-    </div>
+    <h1>Aprendendo Javascript</h1>
+    <p id="texto"></p>
+    <button onclick="verResultado()">Clique para ver o resultado</button>
+    <button style="margin-top: 20px;" onclick="limparResultado()">Limpar resultado</button>
+
     <script src="js/index.js"></script>
 </body>
 </html>
