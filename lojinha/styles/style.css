@@ -7,9 +7,15 @@
     --fontedois: Roboto;
 }
 
+body {
+    position: relative;
+}
+
 * {
     margin: 0;
     padding: 0;
+    user-select: none;
+    user-zoom: fixed;
 }
 
 header h1 {
@@ -93,11 +99,26 @@ header div#carrinho > img {
 
 header {
     margin-bottom: 5vh;
+    padding: 15px;
 }
 
 
 nav {
     margin-right: 15px;
+    padding-right: 10px;
+    z-index: 0;
+}
+
+nav div#carrinho:hover{
+    scale: 1.08;
+    transition: 0.3s ease-in-out;
+}
+
+div#carrinho {
+    cursor: pointer;
+    margin-left: 5px;
+    scale: 1;
+    transition: 0.3s ease-in-out;
 }
 
 
@@ -140,6 +161,18 @@ div#imagem {
     margin-top: 10px;
 }
 
+/* itens */
+
+div#itens {
+    width: 35vw;
+    height: 100vh;
+    background-color: rgb(56, 55, 55);
+    border-radius: 20px 0px 0px 20px;
+    position: absolute;
+    top: 7.69%;
+    right: -100%;
+}
+
 /* rodapé */
 
 footer {
@@ -154,4 +187,19 @@ footer {
 footer a {
     color: black;
     font-size: 1.2em;
+}
+
+
+
+
+@keyframes move {
+    from {
+        position: absolute;
+        right: -100%;
+    }
+
+    to {
+        position: absolute;
+        right: 0%;
+    }
 }

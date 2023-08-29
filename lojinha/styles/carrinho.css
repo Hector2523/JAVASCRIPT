@@ -1,0 +1,25 @@
+* {
+    overflow-x: hidden;
+}
+
+nav::-webkit-scrollbar {
+    overflow: hidden;
+    height: 0;
+    width: 0;
+}
+
+div#itens {
+    overflow: hidden;
+}
+
+@keyframes move {
+    from {
+        position: absolute;
+        right: -100%;
+    }
+
+    to {
+        position: absolute;
+        right: 0%;
+    }
+}

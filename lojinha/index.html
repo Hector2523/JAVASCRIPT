@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lojinha</title>
     <link rel="stylesheet" href="styles/style.css">
 </head>
+
 <body>
     <header>
         <div class="logo">
@@ -16,12 +18,28 @@
             <a href="">About</a>
             <a id="login" href="">Login</a>
             <a href="" id="registrar">Registrar</a>
-            <a href="" class="carrinho">
-                <div id="carrinho">
-                 <img id="vazio" src="imagens/carrinhovazio.png" alt="carrinho">
-                 <img id="cheio" src="imagens/carrinhocheio.png" alt="carrinho">
-                </div>
-            </a>
+            <div id="carrinho" onclick="abrirCarrinho()">
+                <img id="vazio" src="imagens/carrinhovazio.png" alt="carrinho">
+                <img id="cheio" src="imagens/carrinhocheio.png" alt="carrinho">
+            </div>
+            <script>
+                let carrinho = false;
+
+                function abrirCarrinho() {
+                    const itensElement = document.getElementById("itens");
+
+                    if (!carrinho) {
+                        itensElement.style.position = "absolute";
+                        itensElement.style.right = "0%";
+                        carrinho = true;
+                    } else {
+                        document.body.style.overflowX = "hidden";
+                        itensElement.style.right = "-100%";
+                        carrinho = false;
+                    }
+                }
+
+            </script>
         </nav>
     </header>
     <main>
@@ -65,4 +83,5 @@
     </footer>
     <script src="js/index.js"></script>
 </body>
+
 </html>
