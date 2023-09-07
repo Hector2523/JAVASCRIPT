@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lojinha</title>
     <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/carrinho.css">
 </head>
 
 <body>
@@ -29,16 +30,13 @@
                     const itensElement = document.getElementById("itens");
 
                     if (!carrinho) {
-                        itensElement.style.position = "absolute";
-                        itensElement.style.right = "0%";
+                        itensElement.style.animation = "move 0.8s forwards";
                         carrinho = true;
                     } else {
-                        document.body.style.overflowX = "hidden";
-                        itensElement.style.right = "-100%";
+                        itensElement.style.animation = "nomove 0.8s forwards";
                         carrinho = false;
                     }
                 }
-
             </script>
         </nav>
     </header>

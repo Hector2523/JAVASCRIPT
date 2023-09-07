@@ -69,7 +69,7 @@ nav a#login, a#registrar {
     font-family: var(--fontloginregistro);
 }
 
-nava.carrinho {
+nav a.carrinho {
     background-color: transparent;
 }
 
@@ -187,19 +187,4 @@ footer {
 footer a {
     color: black;
     font-size: 1.2em;
-}
-
-
-
-
-@keyframes move {
-    from {
-        position: absolute;
-        right: -100%;
-    }
-
-    to {
-        position: absolute;
-        right: 0%;
-    }
 }

@@ -23,3 +23,15 @@ div#itens {
         right: 0%;
     }
 }
+
+@keyframes nomove {
+    from {
+        position: absolute;
+        right: 0%;
+    }
+
+    to {
+        position: absolute;
+        right: -100%;
+    }
+}
