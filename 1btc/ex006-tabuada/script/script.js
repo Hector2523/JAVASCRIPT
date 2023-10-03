@@ -2,7 +2,7 @@ const numero = prompt("Olá eu sou um robô da tabuada!" + "\nInforme o número 
 
 let resultado = "";
 
-for (let fator= 1; fator <= 20; fator++) {
+for (let fator = 1; fator <= 20; fator++) {
     resultado += " -> " + numero +" * " + fator + " = " + (numero*fator) + "\n";
 }
 
