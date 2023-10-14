@@ -16,6 +16,7 @@ body {
     padding: 0;
     user-select: none;
     user-zoom: fixed;
+    box-sizing: border-box;
 }
 
 header h1 {
@@ -32,7 +33,7 @@ header {
 }
 
 nav {
-    display: flex;
+    display: none;
     align-items: center;
 }
 
@@ -119,6 +120,89 @@ div#carrinho {
     margin-left: 5px;
     scale: 1;
     transition: 0.3s ease-in-out;
+}
+
+/* menu de celular */
+
+div.menu {
+    width: 35px;
+    height: 40px;
+    cursor: pointer;
+    position: relative;
+}
+
+div.menu span {
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: black;
+}
+
+div.menu span#menuUm {
+    position: absolute;
+    top: 25%;
+    transform: translate(-50%, -50%);
+    animation: menuUm 1s ease-in-out forwards;
+}
+
+div.menu span#menuDois {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    animation: menuDois .5s ease-in-out forwards;
+}
+
+div.menu span#menuTres {
+    position: absolute;
+    top: 75%;
+    transform: translateY(-50%);
+    animation: menuTres 1s ease-in-out forwards;
+}
+
+menu {
+    display: none;
+}
+
+@keyframes menuUm {
+    from {
+        position: absolute;
+        top: 25%;
+        transform: translate(-50%, -50%);
+        transform: rotate(0deg);
+    }
+
+    to {
+        position: absolute;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        transform: rotate(45deg);
+    }
+}
+
+@keyframes menuDois {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+    }
+}
+
+@keyframes menuTres {
+    from {
+        position: absolute;
+        top: 75%;
+        transform: translate(-50%, -50%);
+        transform: rotate(0deg);
+    }
+
+    to {
+        position: absolute;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        transform: rotate(-45deg);
+    }
 }
 
 
