@@ -1,0 +1,15 @@
+@charset "UTF-8";
+
+body {
+    display: flex;
+    justify-content: center;
+}
+
+form {
+    display: flex;
+    gap: 20px;
+}
+
+input[type = text] {
+    padding: 10px 10px;
+}
