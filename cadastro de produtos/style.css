@@ -8,8 +8,20 @@ body {
 form {
     display: flex;
     gap: 20px;
+    align-items: center;
 }
 
 input[type = text] {
     padding: 10px 10px;
+}
+
+ul {
+    list-style-type: decimal;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+button, #file-upload-button {
+    cursor: pointer;
 }
